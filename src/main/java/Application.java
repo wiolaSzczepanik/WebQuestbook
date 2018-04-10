@@ -9,6 +9,8 @@ public class Application {
 
         server.createContext("/hello", new Hello());
         server.createContext("/forum", new Forum());
+        server.createContext("/message", new Message());
+
 
         server.setExecutor(null);
 
