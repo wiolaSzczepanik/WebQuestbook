@@ -8,6 +8,7 @@ public class Application {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         server.createContext("/hello", new Hello());
+        server.createContext("/forum", new Forum());
 
         server.setExecutor(null);
 
