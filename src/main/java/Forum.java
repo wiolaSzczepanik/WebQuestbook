@@ -3,10 +3,14 @@ import com.sun.net.httpserver.HttpHandler;
 
 import java.io.*;
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Forum implements HttpHandler {
+
+    List<String> responses =  new ArrayList<String>();
 
     public void handle(HttpExchange httpExchange) throws IOException {
 
