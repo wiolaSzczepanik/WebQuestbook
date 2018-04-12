@@ -1,0 +1,19 @@
+body{
+    width: 50%;
+    padding-left: 25%;
+}
+
+h1{
+    font-family: "Century Schoolbook L";
+    font-size: 30px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+h2{
+    font-family: "Century Schoolbook L";
+    font-size: 20px;
+    color: darkslategray;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
