@@ -15,6 +15,7 @@ public class Static implements HttpHandler {
 
         // get file path from url
         URI uri = httpExchange.getRequestURI();
+        System.out.println(uri);
         System.out.println("looking for: " + uri.getPath());
         String path = "." + uri.getPath();
 

@@ -19,7 +19,7 @@ public class Message implements HttpHandler {
 
 
         if (method.equals("GET")) {
-            text_response = "<html><body><h1>GUESTBOOK</h1><h2>";
+            text_response = "<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"static/css/style.css\"></head><body><h1>GUESTBOOK</h1><h2>";
             int i = 0;
             text_response = displayAllMessegesInCollection(text_response, i);
             text_response += "</h2><br><form method=\"POST\">\n" +
@@ -46,18 +46,18 @@ public class Message implements HttpHandler {
             inputs.put("date", dateFormat.format(date));
             messages.add(inputs);
 
-            text_response = "<html><body><h1>GUESTBOOK</h1><h2>";
+            text_response = "<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"static/css/style.css\"></head><body><h1>GUESTBOOK</h1><h2>";
             int i = 0;
             text_response = displayAllMessegesInCollection(text_response, i);
             text_response += "</h2><br><form method=\"POST\">\n" +
-                        "  Message:<br>\n" +                                             
-                        "  <input type=\"text\" name=\"message\" value=\"TEXT\">\n" +    
-                        "  <br>\n" +                                                     
-                        "  Name:<br>\n" +                                                
-                        "  <input type=\"text\" name=\"name\" value=\"Your name\">\n" +  
-                        "  <br><br>\n" +                                                 
-                        "  <input type=\"submit\" value=\"Submit\">\n" +                 
-                        "</form> " +                                                     
+                        "  Message:<br>\n" +
+                        "  <input type=\"text\" name=\"message\" value=\"TEXT\">\n" +
+                        "  <br>\n" +
+                        "  Name:<br>\n" +
+                        "  <input type=\"text\" name=\"name\" value=\"Your name\">\n" +
+                        "  <br><br>\n" +
+                        "  <input type=\"submit\" value=\"Submit\">\n" +
+                        "</form> " +
                         "</body></html>";
         }
         httpExchange.sendResponseHeaders(200, text_response.length());
