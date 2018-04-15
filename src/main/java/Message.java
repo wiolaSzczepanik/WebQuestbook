@@ -24,14 +24,15 @@ public class Message implements HttpHandler {
             text_response = displayAllMessegesInCollection(text_response, i);
             text_response += "</h2><br><form method=\"POST\">\n" +
                     "  Message:<br>\n" +
-                    "  <input type=\"text\" name=\"message\" value=\"TEXT\">\n" +
+                    "  <input type=\"text\" name=\"message\" placeholder=\"TEXT\">\n" +
                     "  <br>\n" +
                     "  Name:<br>\n" +
-                    "  <input type=\"text\" name=\"name\" value=\"Your name\">\n" +
+                    "  <input type=\"text\" name=\"name\" placeholder=\"YOUR NAME\">\n" +
                     "  <br><br>\n" +
                     "  <input type=\"submit\" value=\"Submit\">\n" +
                     "</form> " +
                     "</body></html>";
+
         }
 
         if (method.equals("POST")) {
